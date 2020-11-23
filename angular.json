@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "projects": {
+    "pkmn-tcg": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/pkmn-tcg",
+      "sourceRoot": "apps/pkmn-tcg/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/pkmn-tcg",
+            "index": "apps/pkmn-tcg/src/index.html",
+            "main": "apps/pkmn-tcg/src/main.ts",
+            "polyfills": "apps/pkmn-tcg/src/polyfills.ts",
+            "tsConfig": "apps/pkmn-tcg/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/pkmn-tcg/src/favicon.ico",
+              "apps/pkmn-tcg/src/assets"
+            ],
+            "styles": ["apps/pkmn-tcg/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/pkmn-tcg/src/environments/environment.ts",
+                  "with": "apps/pkmn-tcg/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "pkmn-tcg:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "pkmn-tcg:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "pkmn-tcg:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/pkmn-tcg/tsconfig.app.json",
+              "apps/pkmn-tcg/tsconfig.spec.json",
+              "apps/pkmn-tcg/tsconfig.editor.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/pkmn-tcg/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/pkmn-tcg/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "pkmn-tcg-e2e": {
+      "root": "apps/pkmn-tcg-e2e",
+      "sourceRoot": "apps/pkmn-tcg-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/pkmn-tcg-e2e/cypress.json",
+            "tsConfig": "apps/pkmn-tcg-e2e/tsconfig.e2e.json",
+            "devServerTarget": "pkmn-tcg:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "pkmn-tcg:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/pkmn-tcg-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/pkmn-tcg-e2e/**/*"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "pkmn-tcg"
+}
