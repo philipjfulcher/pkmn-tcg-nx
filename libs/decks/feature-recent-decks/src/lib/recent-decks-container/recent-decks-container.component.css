@@ -1,0 +1,24 @@
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.deck-summary {
+  flex: 20%;
+  margin-top: 24px;
+  margin-right: 24px;
+  border: solid 2px darkgray;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.deck-summary pkmn-tcg-card-summary {
+  box-shadow: 5px 5px 0 -3px white, 5px 5px rgb(233,196,73),
+    10px 10px 0 -3px white, 10px 10px rgb(233,196,73), 15px 15px 0 -3px white,
+    15px 15px rgb(233,196,73), 20px 20px 0 -3px white,
+    20px 20px rgb(233,196,73);
+}

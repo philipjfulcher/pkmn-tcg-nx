@@ -15,7 +15,28 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@pkmn-tcg/decks/feature-recent-decks": [
+        "libs/decks/feature-recent-decks/src/index.ts"
+      ],
+      "@pkmn-tcg/shared/ui-card-summary": [
+        "libs/shared/ui-card-summary/src/index.ts"
+      ],
+      "@pkmn-tcg/core/data-access-auth": [
+        "libs/core/data-access-auth/src/index.ts"
+      ],
+      "@pkmn-tcg/cards/feature-search": [
+        "libs/cards/feature-search/src/index.ts"
+      ],
+      "@pkmn-tcg/shared/data-access-cards": [
+        "libs/shared/data-access-cards/src/index.ts"
+      ],
+      "@pkmn-tcg/decks/data-access-decks": [
+        "libs/decks/data-access-decks/src/index.ts"
+      ],
+      "@pkmn-tcg/shared/model-card": ["libs/shared/model-card/src/index.ts"],
+      "@pkmn-tcg/decks/model-decks": ["libs/decks/model-decks/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

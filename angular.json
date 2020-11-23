@@ -118,6 +118,229 @@
           }
         }
       }
+    },
+    "decks-feature-recent-decks": {
+      "projectType": "library",
+      "root": "libs/decks/feature-recent-decks",
+      "sourceRoot": "libs/decks/feature-recent-decks/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/decks/feature-recent-decks/tsconfig.lib.json",
+              "libs/decks/feature-recent-decks/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/decks/feature-recent-decks/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/decks/feature-recent-decks/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "shared-ui-card-summary": {
+      "projectType": "library",
+      "root": "libs/shared/ui-card-summary",
+      "sourceRoot": "libs/shared/ui-card-summary/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui-card-summary/tsconfig.lib.json",
+              "libs/shared/ui-card-summary/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui-card-summary/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui-card-summary/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "core-data-access-auth": {
+      "projectType": "library",
+      "root": "libs/core/data-access-auth",
+      "sourceRoot": "libs/core/data-access-auth/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/data-access-auth/tsconfig.lib.json",
+              "libs/core/data-access-auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/core/data-access-auth/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/data-access-auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "cards-feature-search": {
+      "projectType": "library",
+      "root": "libs/cards/feature-search",
+      "sourceRoot": "libs/cards/feature-search/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/cards/feature-search/tsconfig.lib.json",
+              "libs/cards/feature-search/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/cards/feature-search/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/cards/feature-search/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "shared-data-access-cards": {
+      "projectType": "library",
+      "root": "libs/shared/data-access-cards",
+      "sourceRoot": "libs/shared/data-access-cards/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/data-access-cards/tsconfig.lib.json",
+              "libs/shared/data-access-cards/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/data-access-cards/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/data-access-cards/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "decks-data-access-decks": {
+      "projectType": "library",
+      "root": "libs/decks/data-access-decks",
+      "sourceRoot": "libs/decks/data-access-decks/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/decks/data-access-decks/tsconfig.lib.json",
+              "libs/decks/data-access-decks/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/decks/data-access-decks/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/decks/data-access-decks/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "shared-model-card": {
+      "projectType": "library",
+      "root": "libs/shared/model-card",
+      "sourceRoot": "libs/shared/model-card/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/model-card/tsconfig.lib.json",
+              "libs/shared/model-card/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/model-card/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/model-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "decks-model-decks": {
+      "projectType": "library",
+      "root": "libs/decks/model-decks",
+      "sourceRoot": "libs/decks/model-decks/src",
+      "prefix": "pkmn-tcg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/decks/model-decks/tsconfig.lib.json",
+              "libs/decks/model-decks/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/decks/model-decks/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/decks/model-decks/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
