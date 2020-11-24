@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+pkmn-tcg-card-summary {
+  flex: 20%;
+  margin-top: 24px;
+  margin-right: 24px;
+}

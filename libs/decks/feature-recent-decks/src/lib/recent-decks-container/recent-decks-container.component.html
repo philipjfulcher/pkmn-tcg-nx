@@ -1,0 +1,8 @@
+<div class="deck-summary" *ngFor="let deck of decks$ | async">
+  <div>
+    <h3>{{ deck.name }}</h3>
+    <h4>{{ deck.legality }}</h4>
+  </div>
+
+  <pkmn-tcg-card-summary [card]="deck.cards[0].card"></pkmn-tcg-card-summary>
+</div>

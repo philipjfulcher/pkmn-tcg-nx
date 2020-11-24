@@ -60,8 +60,62 @@
         "allow": [],
         "depConstraints": [
           {
-            "sourceTag": "*",
-            "onlyDependOnLibsWithTags": ["*"]
+            "sourceTag": "type:feature",
+            "onlyDependOnLibsWithTags": [
+              "type:ui",
+              "type:util",
+              "type:model",
+              "type:feature",
+              "type:data-access"
+            ]
+          },
+          {
+            "sourceTag": "type:data-access",
+            "onlyDependOnLibsWithTags": [
+              "type:util",
+              "type:model",
+              "type:data-access"
+            ]
+          },
+          {
+            "sourceTag": "type:app",
+            "onlyDependOnLibsWithTags": [
+              "type:feature",
+              "type:model",
+              "type:state",
+              "type:eager",
+              "type:assets",
+              "type:data-access",
+              "type:util"
+            ]
+          },
+          {
+            "sourceTag": "type:ui",
+            "onlyDependOnLibsWithTags": ["type:util", "type:ui", "type:model"]
+          },
+          {
+            "sourceTag": "scope:shared",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:core"]
+          },
+          {
+            "sourceTag": "scope:core",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:core"]
+          },
+          {
+            "sourceTag": "scope:cards",
+            "onlyDependOnLibsWithTags": [
+              "scope:core",
+              "scope:shared",
+              "scope:cards"
+            ]
+          },
+          {
+            "sourceTag": "scope:decks",
+            "onlyDependOnLibsWithTags": [
+              "scope:core",
+              "scope:shared",
+              "scope:decks"
+            ]
           }
         ]
       }

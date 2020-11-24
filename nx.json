@@ -24,11 +24,35 @@
   },
   "projects": {
     "pkmn-tcg": {
-      "tags": []
+      "tags": ["type:app"]
     },
     "pkmn-tcg-e2e": {
-      "tags": [],
+      "tags": ["type:e2e"],
       "implicitDependencies": ["pkmn-tcg"]
+    },
+    "decks-feature-recent-decks": {
+      "tags": ["type:feature", "scope:decks"]
+    },
+    "shared-ui-card-summary": {
+      "tags": ["type:ui", "scope:shared"]
+    },
+    "core-data-access-auth": {
+      "tags": ["type:data-access", "scope:core"]
+    },
+    "cards-feature-search": {
+      "tags": ["type:feature", "scope:cards"]
+    },
+    "shared-data-access-cards": {
+      "tags": ["type:data-access", "scope:shared"]
+    },
+    "decks-data-access-decks": {
+      "tags": ["type:data-access", "scope:decks"]
+    },
+    "shared-model-card": {
+      "tags": ["type:model", "scope:shared"]
+    },
+    "decks-model-decks": {
+      "tags": ["type:model", "scope:decks"]
     }
   }
 }
